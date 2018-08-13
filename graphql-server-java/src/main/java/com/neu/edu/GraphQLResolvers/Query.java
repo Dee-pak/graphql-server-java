@@ -1,4 +1,4 @@
-package com.neu.edu.GraphQLQueryResolver;
+package com.neu.edu.GraphQLResolvers;
 
 import com.coxautodev.graphql.tools.GraphQLRootResolver;
 import com.neu.edu.domain.Link;
