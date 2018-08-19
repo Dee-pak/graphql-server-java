@@ -37,20 +37,26 @@ public class LinkRepository {
         );
     }
 
-    public List<Link> getAllLinks(){
-        List<Link> allLinks = new ArrayList<Link>();
-        for (Document document : links.find()){
-            allLinks.add(link(document));
+    public List<Link> getAllLinks() {
+        List<Link> allLinks = new ArrayList<>();
+        for (Document doc : links.find()) {
+            Link link = new Link(
+                    doc.get("_id").toString(),
+                    doc.getString("url"),
+                    doc.getString("description"),
+                    doc.getString("postedBy")
+            );
+            allLinks.add(link);
         }
         return allLinks;
     }
 
-    public void saveLink(Link link){
-        Document document = new Document();
-        document.append("url", link.getUrl());
-        document.append("description", link.getDescription());
-        document.append("postedBy", link.getUserId());
-        links.insertOne(document);
+    public void saveLink(Link link) {
+        Document doc = new Document();
+        doc.append("url", link.getUrl());
+        doc.append("description", link.getDescription());
+        doc.append("postedBy", link.getUserId());
+        links.insertOne(doc);
     }
 
 }

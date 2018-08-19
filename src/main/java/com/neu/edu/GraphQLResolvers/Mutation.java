@@ -2,7 +2,7 @@ package com.neu.edu.GraphQLResolvers;
 
 import com.coxautodev.graphql.tools.GraphQLRootResolver;
 import com.neu.edu.authentication.AuthContext;
-import com.neu.edu.domain.AuthData;
+import com.neu.edu.authentication.AuthData;
 import com.neu.edu.domain.Link;
 import com.neu.edu.domain.SignInPayload;
 import com.neu.edu.domain.User;
