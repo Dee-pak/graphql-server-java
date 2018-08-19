@@ -5,7 +5,6 @@ import com.neu.edu.domain.Link;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
-import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +51,7 @@ public class LinkRepository {
     }
 
     public void saveLink(Link link) {
+        System.out.println("Saving the Link " + link.getUrl());
         Document doc = new Document();
         doc.append("url", link.getUrl());
         doc.append("description", link.getDescription());

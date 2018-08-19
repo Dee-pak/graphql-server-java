@@ -12,9 +12,11 @@ public class Link {
 
     public Link(String url, String description, String userId){
         this(null, url, description, userId);
+        System.out.println("In Link Constructor 1 !");
     }
 
     public Link(String id, String url, String description, String userId){
+        System.out.println("In Link Constructor 2!");
         this.id = id;
         this.url = url;
         this.description = description;
